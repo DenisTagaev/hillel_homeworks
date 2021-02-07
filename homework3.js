@@ -44,9 +44,11 @@ if(a1 === null || !a1){
                     case "*" :
                         result = a1 * a2;
                         alert(result);
+                        //тут выведет результат если все вводы корректны
                     break;
                     default:
                         alert("Incorrect operation")
+                        //тут выйдет ошибка если оператор не подходит
                 }
             }
     }
