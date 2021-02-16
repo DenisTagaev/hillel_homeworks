@@ -1,15 +1,20 @@
 let arr = [1, 2, 3, 1, 0, 10, 7];
 
-function sortFn(array) {
-  let arr2 = [];
+function sortFn(array, callback) {
 
-  for (let i = 0; array.length; i++) { 
-        arr2.push(array.splice (array.indexOf (Math.min (...array) ), 1) [0] );
+  for (let i = 0; i < array.length; i++) {
+
+     for (var e = 0; e < array.length; e++) {
+
+         if (callback(array[i], array[e] ) < 0) { 
+           [array[i], array[e]] = [array[e], array[i]];
+         }
+     }
   }
-
-  return console.log(arr2);
+  return array;
 }
-sortFn(arr);
+
+console.log(sortFn(arr, (a, b) => a - b) );
 
 
 // function sortFn(array) {
