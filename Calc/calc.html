@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results form</title>
+    <script defer src="calc.js"></script>
+    <style>
+        h2{
+            margin-left: 3%;
+        }
+        form {
+            width: 25%;
+            margin-left: 3%;
+        }
+        input {
+            width: 365px;
+            margin-left: 10px;
+        }
+        .last > input {
+            margin-left: 12px;
+        }
+        button {
+            margin: 1em 0;
+            margin-left: 3%;
+            padding: 1em 2em;
+            background-color: rgb(44, 44, 177);
+            color: #fff;
+        }
+        ol {
+            position: absolute;
+            right: 25%;
+            top: 2%;
+            display: none;
+            margin-top: 0;
+            background-color: rgb(0, 217, 255);
+            padding: 50px;
+            border-radius: 4px;
+            border: 4px dotted burlywood;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h2>Add results</h2>
+    <form  id="Race-form" name="Race-form">
+        <label class="unmoved">
+          Name:
+          <input type="text" name="Name" autocomplete="off" required><br>
+        </label>
+          <!-- <div class="message" data-for="Name"> -->
+
+          </div>
+        <label>
+          Track:
+          <input type="text" name="Track" autocomplete="on" required><br>
+        </label>
+          <!-- <div class="message" data-for="Surname"> -->
+            
+          </div>
+        <label class="unmoved last">
+          Time:
+          <input type="time" name="time" max='00:05' min='00:00' step="0.1" required>
+        </label>
+        <!-- <div class="message" data-for="Marks"> -->
+            
+        </div>
+    </form>
+
+    <button id="addnew">Add to List</button>
+
+    <ol id="race-list"> </ol>
+    <button id="group">Show results</button>
+    
+</body>
+</html>
